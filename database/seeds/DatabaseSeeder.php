@@ -2,15 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        // $this->call(UsersTableSeeder::class);
+class DatabaseSeeder extends Seeder {
+    public function run() {
+        $this->call(DirectorsTableSeeder::class); // Order matters here for foreign key constraint.
+        $this->call(MoviesTableSeeder::class);
+        $this->call(MovieGenreTableSeeder::class);
     }
 }

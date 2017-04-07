@@ -9,15 +9,16 @@ class CreateMoviesTable extends Migration {
     Schema::create('movies', function (Blueprint $table) {
       $table->increments('movieId', true);
       $table->char('title', 35)->default('');
-      $table->char('movieUrl', 50)->default('');
-      $table->char('imageUrl', 50)->default('');
-      $table->char('trailerUrl', 50)->default('');
+      $table->char('movieUrl', 100)->default('');
+      $table->char('imageUrl', 100)->default('');
+      $table->char('trailerUrl', 100)->default('');
       $table->smallInteger('year')->default(0);
       $table->float('price', 3, 2)->default(0.0);
       $table->tinyInteger('numCopies')->default(0);
       $table->enum('mpRating', ['Not rated', 'G', 'PG', 'PG-13', 'NC-17', 'R']); // Defaults to first element in list because not null?
       $table->float('imbdRating', 2, 1)->default(0.0);
-      $table->integer('directorId')->unsigned();
+      //$table->integer('directorId')->unsigned(); // nullable?
+      $table->integer('directorId')->nullable()->default(null)->unsigned();
       $table->smallInteger('runtime')->default(0)->comment('In minutes.');
       $table->text('plot'); // Default value not allowed for memory conservation.
     });
