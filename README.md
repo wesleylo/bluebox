@@ -8,9 +8,9 @@ The [BlueBox API](https://wesleylo.gitbooks.io/bluebox/content/) is a [RESTful](
 3. With MAMP, start a server with Web & MySQL ports set to 8888 & 8889
 4. Install [Composer](https://getcomposer.org/download/)
 5. Open console and cd to the document root
-6. Run ```bash php artisan migrate```
-7. Run ```bash php artisan db:seed```
-8. Run ```bash php artisan serve```
+6. Run ```php artisan migrate```
+7. Run ```php artisan db:seed```
+8. Run ```php artisan serve```
 
 ## Credits
 
