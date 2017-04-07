@@ -11,8 +11,11 @@ class MoviesController extends Controller
       //return Response::json($movies); // Is this necessary if laravel automatically displays json?
       //return view('movies.index', compact('movies')); // Eventually display in a view.
     }
-    public function show(Movie $movieID) { // Task::find(wildcard)
+    public function show(Movie $movieId) { // Task::find(wildcard)
       //$movie = Movie::find($movieID);
-      return $movieID;
+      return $movieId;
     }
+    // public function update(Movie $movieID) {
+    //   $movieID;
+    // }
 }
