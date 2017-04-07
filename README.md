@@ -6,12 +6,12 @@ The [BlueBox API](https://wesleylo.gitbooks.io/bluebox/content/) is a [RESTful](
 1. Clone this repository
 2. Open MAMP and set the document root to the public folder of the cloned repository from step 1
 3. With MAMP, start a server with Web & MySQL ports set to 8888 & 8889
-4. Install [composer](https://getcomposer.org/download/)
+4. Install [Composer](https://getcomposer.org/download/)
 5. Open console and cd to the document root
-6. Run "php artisan migrate"
-7. Run "php artisan db:seed"
-8. Run "php artisan serve"
+6. Run ```bash php artisan migrate```
+7. Run ```bash php artisan db:seed```
+8. Run ```bash php artisan serve```
 
 ## Credits
 
-Copyright 2017 Wesley Lo.
+Copyright 2017 [Wesley Lo](https://github.com/wesleylo/).

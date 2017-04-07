@@ -18,7 +18,7 @@ class CreateMoviesTable extends Migration {
       $table->enum('mpRating', ['Not rated', 'G', 'PG', 'PG-13', 'NC-17', 'R']); // Defaults to first element in list because not null?
       $table->float('imbdRating', 2, 1)->default(0.0);
       //$table->integer('directorId')->unsigned(); // nullable?
-      $table->integer('directorId')->nullable()->default(null)->unsigned();
+      $table->integer('directorId')->nullable()->default(null)->unsigned(); // nullable makes for easier testing but should be not null
       $table->smallInteger('runtime')->default(0)->comment('In minutes.');
       $table->text('plot'); // Default value not allowed for memory conservation.
     });
