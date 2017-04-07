@@ -1,5 +1,5 @@
 <?php
-// Migrate second
+// Migrate second. To reset, drop second.
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;

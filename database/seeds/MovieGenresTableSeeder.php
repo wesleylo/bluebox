@@ -2,13 +2,13 @@
 
 use Illuminate\Database\Seeder;
 
-class MovieGenreTableSeeder extends Seeder {
+class MovieGenresTableSeeder extends Seeder {
     public function run() {
-      DB::table('movie-genre')->insert([
+      DB::table('movie_genres')->insert([
           'movieId' => 1,
           'genre' => 'Drama',
       ]);
-      DB::table('movie-genre')->insert([
+      DB::table('movie_genres')->insert([
           'movieId' => 1,
           'genre' => 'Sci-Fi',
       ]);
