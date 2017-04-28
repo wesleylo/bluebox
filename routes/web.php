@@ -27,5 +27,5 @@ Route::delete('/movie-genres/{id}', 'MovieGenreController@destroy');
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
