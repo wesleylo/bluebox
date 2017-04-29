@@ -1,7 +1,7 @@
-￼![logo](https://github.com/wesleylo/bluebox-api/raw/master/logo.png)
-# bluebox-api
+![logo](https://github.com/wesleylo/bluebox-api/raw/master/logo.png)
+# bluebox
 
-The [BlueBox API](https://wesleylo.gitbooks.io/bluebox/content/) is a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) interface built with [Laravel](https://laravel.com/). It provides a framework for creating a video renting service where users maintain an account to rent available movies.
+[BlueBox](https://wesleylo.gitbooks.io/bluebox/content/) is a movie database application built with [Laravel](https://laravel.com/). A user can view the details of a movie that we track of by clicking on a poster.
 
 ## Installation
 1. Clone this repository
