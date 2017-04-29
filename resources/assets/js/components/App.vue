@@ -1,15 +1,6 @@
 <template>
   <div class="container">
-    <Modal></Modal>
-    <div class="description">
-      <ul>
-        <li>{{movies[currMovie].title}}</li>
-        <li>{{movies[currMovie].mpRating}}</li>
-        <li>{{movies[currMovie].runtime}}</li>
-        <li>{{movies[currMovie].imbdRating}}</li>
-        <li>{{movies[currMovie].plot}}</li>
-      </ul>
-    </div>
+    <Movie></Movie>
     <div class="movies">
       <ul>
         <img
@@ -25,12 +16,9 @@
 
 <script>
 import axios from 'axios';
-import Modal from './Modal';
+import Movie from './Movie';
 
 export default {
-    components: {
-      Modal
-    },
     data () {
       return {
         movies: [],

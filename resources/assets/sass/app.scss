@@ -1,4 +1,12 @@
-
+.hero > img {
+  width: 100%;
+}
+.plot {
+  padding-top: 30px;
+}
+#title {  // Overrides bootstrap
+  font-size: 40px;
+}
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 

@@ -1,51 +1,48 @@
 <template>
+  <div class="description">
+    <div class="hero col-sm-12"><img v-bind:src="movies[currMovie].trailerUrl"></div>
+    <div id="title" class="col-sm-12">{{movies[currMovie].title}}</div>
+    <div class="row">
+      <div class="col-sm-2">{{movies[currMovie].mpRating}}</div>
+      <div class="col-sm-2">{{movies[currMovie].runtime}} mins</div>
+      <div class="col-sm-2">{{movies[currMovie].imbdRating}}</div>
 
-      <div class="movie-list">
-
-        <Movie v-for="(movie, movieId) in movies" :key="movie.movieId" :movie="movie"></Movie>
-
-
-      </div>
+  </div>
+  <div class="plot col-sm-12">{{movies[currMovie].plot}}</div>
+</div>
 </template>
 
 <script>
 import axios from 'axios';
+
 export default {
-  components: {
-    
-  },
-  props: [
-    'movie'
-  ],
-  data () {
-    return {
-      title: this.movie.title,
-      movieUrl: this.movie.movieUrl,
-      plot: this.movie.plot
-    }
-  },
-  mounted() {
-    console.log('Movie -> mounted');
-    this.fetch(this.key); // get entry from database
-  },
-  methods: {
-    fetch(movieId) { // fetch database entries
-      console.log('Movie -> fetch');
-      axios.get('/movies/' + movieId)
+    components: {
+
+    },
+    data () {
+      return {
+        movies: [],
+        currMovie: 0
+      }
+    },
+    mounted() {
+        console.log('Component mounted.')
+        this.fetch();
+    },
+    methods: {
+      fetch () {
+      console.log('App -> fetch');
+      axios.get('/movies')
         .then((response) => {
-          console.log('Movie -> fetch success');
-          this.entryData = response.data;
+          console.log('App -> fetch success');
+          console.log(response.data);
+          this.movies = response.data;
         })
         .catch((response) => {
-          console.log('Movie -> fetch error');
+          console.log('App -> fetch error');
           // show error
-          console.log(response); // show error
         })
       }
-  }
+    }
 }
 </script>
-
-<style>
-
-</style>

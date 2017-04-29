@@ -14,5 +14,6 @@ The [BlueBox API](https://wesleylo.gitbooks.io/bluebox/content/) is a [RESTful](
 8. Run ```npm run production```
 
 ## Credits
+Redbox for images
 
 Copyright 2017 [Wesley Lo](https://github.com/wesleylo/).

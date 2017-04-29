@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Http\Request;
-
+//old api
 Route::get('/directors', 'DirectorController@index');
 Route::post('/directors', 'DirectorController@create');
 
@@ -23,13 +23,14 @@ Route::post('/movie-genres', 'MovieGenreController@create');
 Route::get('/movie-genres/{id}', 'MovieGenreController@show');
 Route::put('/movie-genres/{id}', 'MovieGenreController@update');
 Route::delete('/movie-genres/{id}', 'MovieGenreController@destroy');
+//\old api
+
 
 
 
 Route::get('/', function () {
     return view('app');
 });
-
-// Route::get('/rent', function () {
-//     return view('app');
-// });
+Route::get('/styleguide', function () {
+    return view('styleguide');
+});
