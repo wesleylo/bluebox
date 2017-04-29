@@ -1,16 +1,10 @@
 <template>
-  <div class="description">
-    <div class="hero col-sm-12"><img v-bind:src="movies[currMovie].trailerUrl"></div>
-    <div id="title" class="col-sm-12">{{movies[currMovie].title}}</div>
-    <div class="row">
-      <div class="col-sm-2">{{movies[currMovie].mpRating}}</div>
-      <div class="col-sm-2">{{movies[currMovie].runtime}} mins</div>
-      <div class="col-sm-2">{{movies[currMovie].imbdRating}}</div>
-
-  </div>
+  <img
+    v-for="(movieGenres, movieId) in movies" :key="movie.movieId" :movie="movie"
+    v-bind:src="movie.imageUrl"
+    @click="clickMovie(movie.movieId)"
+  >
   <div class="plot col-sm-12">{{movies[currMovie].plot}}</div>
-  <Genre></Genre>
-  <Director></Director>
 </div>
 </template>
 
@@ -19,15 +13,14 @@ import axios from 'axios';
 
 export default {
     components: {
-      // Genre,
-      // Director
+
     },
     data () {
       return {
-        movies: [],
+        movieGenres: [],
       }
     },
-    props: ['currMovie'],
+    props: ['movie'],
     mounted() {
         console.log('Component mounted.')
         this.fetch();
@@ -35,11 +28,11 @@ export default {
     methods: {
       fetch () {
       console.log('App -> fetch');
-      axios.get('/movies')
+      axios.get('/movie-genres')
         .then((response) => {
           console.log('App -> fetch success');
           console.log(response.data);
-          this.movies = response.data;
+          this.movieGenres = response.data;
         })
         .catch((response) => {
           console.log('App -> fetch error');

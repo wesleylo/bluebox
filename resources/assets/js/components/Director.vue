@@ -1,30 +1,30 @@
 <template>
-  <div class="container">
-    <Movie></Movie>
-    <div class="movies">
-      <ul>
-        <img
-          v-for="(movie, movieId) in movies" :key="movie.movieId" :movie="movie"
-          v-bind:src="movie.imageUrl"
-          @click="this.$dispatch('updateMovie', movie.movieId);"
-        >
-      </ul>
-    </div>
+  <div class="description">
+    <div class="hero col-sm-12"><img v-bind:src="movies[currMovie].trailerUrl"></div>
+    <div id="title" class="col-sm-12">{{movies[currMovie].title}}</div>
+    <div class="row">
+      <div class="col-sm-2">{{movies[currMovie].mpRating}}</div>
+      <div class="col-sm-2">{{movies[currMovie].runtime}} mins</div>
+      <div class="col-sm-2">{{movies[currMovie].imbdRating}}</div>
 
   </div>
+  <div class="plot col-sm-12">{{movies[currMovie].plot}}</div>
+</div>
 </template>
 
 <script>
 import axios from 'axios';
-import Movie from './Movie';
 
 export default {
+    components: {
+
+    },
     data () {
       return {
         movies: [],
-        currMovie: 0
       }
     },
+    props: ['currMovie'],
     mounted() {
         console.log('Component mounted.')
         this.fetch();
@@ -42,10 +42,11 @@ export default {
           console.log('App -> fetch error');
           // show error
         })
-      },
-      clickMovie (i) {
-        console.log('test click movie' + i);
-        this.currMovie = 2;
+      }
+    },
+    events: {
+      updateMovie: function(i) {
+        console.log("movie recieves" + i)
       }
     }
 }

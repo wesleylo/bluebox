@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Movie></Movie>
+    <Movie v-bind:currMovie="0"></Movie>
     <div class="movies">
       <ul>
         <img
@@ -48,7 +48,7 @@ export default {
       },
       clickMovie (i) {
         console.log('test click movie' + i);
-        this.currMovie = 2;
+        this.currMovie = i;
       }
     }
 }

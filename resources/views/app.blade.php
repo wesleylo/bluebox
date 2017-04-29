@@ -6,10 +6,10 @@
 
 <div class="container-fluid header">
         <div class="row links">
+          <a href="/styleguide">Style Guide</a> |
           <a href="https://github.com/wesleylo/bluebox">Github</a> |
           <a href="https://wesleylo.gitbooks.io/bluebox/content/">Documentation</a> |
           <a href="https://github.com/wesleylo">Portfolio</a>
-
         </div>
       </div>
 <div id="app">
