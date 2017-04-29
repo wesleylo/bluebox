@@ -43,6 +43,11 @@ export default {
           // show error
         })
       }
+    },
+    events: {
+      updateMovie: function(i) {
+        console.log("movie recieves" + i)
+      }
     }
 }
 </script>

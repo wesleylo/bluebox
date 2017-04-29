@@ -6,7 +6,7 @@
         <img
           v-for="(movie, movieId) in movies" :key="movie.movieId" :movie="movie"
           v-bind:src="movie.imageUrl"
-          @click="clickMovie(movie.movieId)"
+          @click="this.$dispatch('updateMovie', movie.movieId);"
         >
       </ul>
     </div>
@@ -19,9 +19,6 @@ import axios from 'axios';
 import Movie from './Movie';
 
 export default {
-    components: {
-      Movie
-    },
     data () {
       return {
         movies: [],

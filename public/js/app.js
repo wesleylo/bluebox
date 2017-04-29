@@ -12173,6 +12173,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Movie: __WEBPACK_IMPORTED_MODULE_1__Movie___default.a
+  },
   data: function data() {
     return {
       movies: [],
@@ -12257,6 +12260,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('App -> fetch error');
         // show error
       });
+    }
+  },
+  events: {
+    updateMovie: function updateMovie(i) {
+      console.log("movie recieves" + i);
     }
   }
 });

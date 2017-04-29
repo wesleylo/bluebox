@@ -11,9 +11,7 @@
     <body>
         <div class="flex-center position-ref full-height">
           @yield('content')
-          <div id="app">
-
-          </div>
+          
           <script>
               window.Laravel = {!! json_encode([
                   'csrfToken' => csrf_token(),
