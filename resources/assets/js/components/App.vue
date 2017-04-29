@@ -1,10 +1,22 @@
 <template>
   <div class="container">
-    Testing!
+    <Modal></Modal>
+    <div class="description">
+      <ul>
+        <li>{{movies[currMovie].title}}</li>
+        <li>{{movies[currMovie].mpRating}}</li>
+        <li>{{movies[currMovie].runtime}}</li>
+        <li>{{movies[currMovie].imbdRating}}</li>
+        <li>{{movies[currMovie].plot}}</li>
+      </ul>
+    </div>
     <div class="movies">
       <ul>
-        <!-- <li><Movie v-for="(movie, movieId) in movies" :key="movie.movieId" :movie="movie"></Movie></li> -->
-        <li v-for="movie in movies">@{{ movie }}</li>
+        <img
+          v-for="(movie, movieId) in movies" :key="movie.movieId" :movie="movie"
+          v-bind:src="movie.imageUrl"
+          @click="clickMovie(movie.movieId)"
+        >
       </ul>
     </div>
 
@@ -13,14 +25,16 @@
 
 <script>
 import axios from 'axios';
+import Modal from './Modal';
 
 export default {
     components: {
-      
+      Modal
     },
     data () {
       return {
-        movies: []
+        movies: [],
+        currMovie: 0
       }
     },
     mounted() {
@@ -40,6 +54,10 @@ export default {
           console.log('App -> fetch error');
           // show error
         })
+      },
+      clickMovie (i) {
+        console.log('test click movie' + i);
+        this.currMovie = 2;
       }
     }
 }

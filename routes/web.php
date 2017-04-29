@@ -29,3 +29,7 @@ Route::delete('/movie-genres/{id}', 'MovieGenreController@destroy');
 Route::get('/', function () {
     return view('app');
 });
+
+// Route::get('/rent', function () {
+//     return view('app');
+// });

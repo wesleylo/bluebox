@@ -8,5 +8,9 @@ class DirectorsTableSeeder extends Seeder {
           'firstName' => 'Morten',
           'lastName' => 'Tyldum',
       ]);
+      DB::table('directors')->insert([
+          'firstName' => 'John',
+          'lastName' => 'Musker',
+      ]);
     }
 }

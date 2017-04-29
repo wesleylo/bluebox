@@ -12,5 +12,9 @@ class MovieGenresTableSeeder extends Seeder {
           'movieId' => 1,
           'genre' => 'Sci-Fi',
       ]);
+      DB::table('movie_genres')->insert([
+          'movieId' => 2,
+          'genre' => 'Action',
+      ]);
     }
 }
