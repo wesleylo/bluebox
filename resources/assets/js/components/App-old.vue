@@ -1,10 +1,11 @@
+// delete later
 <template>
   <div class="container">
     Testing!
     <div class="movies">
       <ul>
-        <!-- <li><Movie v-for="(movie, movieId) in movies" :key="movie.movieId" :movie="movie"></Movie></li> -->
-        <li v-for="movie in movies">@{{ movie }}</li>
+
+
       </ul>
     </div>
 
@@ -13,10 +14,11 @@
 
 <script>
 import axios from 'axios';
+import Movie from './Movie';
 
 export default {
     components: {
-      
+      Movie
     },
     data () {
       return {
