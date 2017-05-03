@@ -1,7 +1,7 @@
 ![logo](https://github.com/wesleylo/bluebox-api/raw/master/logo.png)
 # bluebox
 
-[BlueBox](https://wesleylo.gitbooks.io/bluebox/content/) is a movie database application built with [Laravel](https://laravel.com/). A user can view the details of a movie that we track of by clicking on a poster.
+[BlueBox](https://wesleylo.gitbooks.io/bluebox/content/) is a movie database application built with [Laravel](https://laravel.com/) and [VueJS](https://vuejs.org/). A user can view the details of a movie that we track of by clicking on a poster.
 
 ## Installation
 1. Clone this repository
